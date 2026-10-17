@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WiFi Authentication</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="auth-page">
+      <section class="card">
+        <div class="brand-block">
+          <span class="badge">Secure Access</span>
+          <h1>Wireless Network Authentication</h1>
+        </div>
+
+        <p class="intro">
+          Welcome! This portal helps verify your device before joining our Wi-Fi network.
+          We use this process to keep the connection secure and protect the network from unauthorized access.
+        </p>
+
+        <form id="wifi-form" action="connect.php" method="post" novalidate>
+          <div class="field-group">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="Enter your full name" required />
+          </div>
+
+          <div class="field-group">
+            <label for="device">Phone / Device ID</label>
+            <input id="device" name="device" type="text" placeholder="e.g. Android 14 - Pixel 8" required />
+          </div>
+
+          <div class="terms-consent">
+            <div class="terms-row">
+              <input id="terms" name="terms" type="checkbox" required disabled />
+              <label for="terms">I have read and agree to the Terms and Conditions.</label>
+            </div>
+            <a id="terms-link" class="terms-link" href="Terms and Conditions.html">Read the Terms and Conditions</a>
+            <p id="terms-hint" class="terms-hint">Open the terms page before you can agree.</p>
+          </div>
+
+          <button id="connectBtn" class="btn" type="submit" disabled>Connect to Network</button>
+          <div id="status" class="status" aria-live="polite"></div>
+        </form>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

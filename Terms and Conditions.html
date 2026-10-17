@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms and Conditions</title>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <main class="terms-page">
+      <section class="terms-card">
+        <div class="terms-header">
+          <span class="badge">Network Policy</span>
+          <h1>Terms and Conditions</h1>
+        </div>
+
+        <div class="terms-content">
+          <p>
+            By accessing our wireless network, you agree to use the service responsibly and lawfully.
+            This network is intended for personal and business communication, browsing, and authorized work-related access.
+          </p>
+
+          <h2>1. Acceptable Use</h2>
+          <p>
+            You must not use the network for illegal activities, unauthorized access, hacking, malware distribution,
+            or any action that disrupts the service or threatens network security. Misuse of this connection may
+            result in suspension or removal of access.
+          </p>
+
+          <h2>2. Security and Privacy</h2>
+          <p>
+            We aim to secure the network against unauthorized use, but no wireless connection can be guaranteed to be
+            completely risk-free. Users are responsible for protecting their own devices and personal information while
+            connected to public or shared networks. When you submit this form, we collect your IP address and store it
+            with your registration details to help protect the network and investigate suspected abuse.
+          </p>
+
+          <h2>3. Bandwidth and Service Reliability</h2>
+          <p>
+            Network performance may vary depending on usage, device capability, signal strength, and environmental
+            conditions. We reserve the right to prioritize network resources and manage congestion for fair access.
+          </p>
+
+          <h2>4. Monitoring and Enforcement</h2>
+          <p>
+            The network administrator may monitor connection activity to enforce policy compliance, ensure security,
+            and investigate abuse. Continued use of the network implies acceptance of these conditions.
+          </p>
+
+          <h2>5. Liability</h2>
+          <p>
+            The provider is not liable for any losses, damages, or interruptions caused by misuse, technical faults,
+            or external service disruptions beyond reasonable control. Users access the network at their own risk.
+          </p>
+
+          <p class="agreement-note">
+            By connecting to the internet through this network, you confirm that you have read, understood, and agree to all terms above.
+          </p>
+        </div>
+
+        <div class="footer-actions">
+          <a href="index.html" class="back-link">Back to the Main Page</a>
+        </div>
+      </section>
+    </main>
+    <script>
+      try {
+        sessionStorage.setItem('wifi-terms-viewed', 'true');
+      } catch (error) {
+        // The authentication page will keep the agreement disabled if storage is unavailable.
+      }
+    </script>
+  </body>
+</html>

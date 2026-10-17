@@ -1,0 +1,220 @@
+:root {
+  --bg-dark: #071b2f;
+  --bg-mid: #0d2d4a;
+  --card-bg: rgba(8, 26, 43, 0.88);
+  --primary: #4fd1c5;
+  --primary-dark: #30b7ad;
+  --text: #edf6ff;
+  --muted: #b9d5eb;
+  --border: rgba(255, 255, 255, 0.12);
+  --danger: #ff7373;
+  --success: #73d88c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, var(--bg-dark), var(--bg-mid));
+  color: var(--text);
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(100%, 560px);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
+  padding: 32px 28px;
+  backdrop-filter: blur(10px);
+}
+
+.brand-block {
+  margin-bottom: 18px;
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(79, 209, 197, 0.12);
+  border: 1px solid rgba(79, 209, 197, 0.35);
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.intro {
+  margin: 0 0 26px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  color: var(--text);
+  font-weight: 600;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+input[type="text"]::placeholder {
+  color: rgba(237, 246, 255, 0.55);
+}
+
+input[type="text"]:focus {
+  outline: 2px solid rgba(79, 209, 197, 0.8);
+  border-color: transparent;
+}
+
+.terms-consent {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.terms-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.terms-row label {
+  cursor: pointer;
+}
+
+.terms-row input[type="checkbox"] {
+  appearance: none;
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  border: 2px solid rgba(185, 213, 235, 0.65);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.terms-row input[type="checkbox"]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23062a2d' stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='m4 10 4 4 8-8'/%3E%3C/svg%3E");
+}
+
+.terms-row input[type="checkbox"]:focus-visible {
+  outline: 3px solid rgba(79, 209, 197, 0.45);
+  outline-offset: 3px;
+}
+
+.terms-row input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.terms-link {
+  display: inline-block;
+  margin: 10px 0 0 33px;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.terms-link:hover {
+  text-decoration: underline;
+}
+
+.terms-hint {
+  margin: 6px 0 0 33px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.btn {
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #062a2d;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.status {
+  min-height: 24px;
+  font-size: 0.96rem;
+  color: var(--muted);
+}
+
+.status.success {
+  color: var(--success);
+}
+
+.status.error {
+  color: var(--danger);
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 24px 18px;
+  }
+
+  .terms-consent {
+    padding: 14px;
+  }
+}
